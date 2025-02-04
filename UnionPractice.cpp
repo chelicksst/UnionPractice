@@ -3,6 +3,7 @@
 using namespace std;
 
 struct sensor {
+private:
     enum types 
     {
         FLOAT, 
@@ -15,6 +16,8 @@ struct sensor {
         int humidity;
         std::byte illumination;
     };
+
+public:
 
     explicit sensor(float temperature) : type(FLOAT), temperature(temperature) {}
     explicit sensor(int humidity) : type(INT), humidity(humidity) {}
